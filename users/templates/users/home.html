@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/styles.css' %}">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>charma</title>
+</head>
+<body>
+
+    <!--{% load static %} <img class="karma" src="{% static "users/media/name.svg" %}" alt="home"/>-->
+    <head>
+    <header>
+      <nav class="navbar">
+        <a href="home.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="1"/></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/posts/postsHome">Browse Charities</a></li>
+            <li><a href="/posts/addPost">Post your Charity</a></li>
+            <li><a href="/users/choice">Login/Register</a></li>      
+          </ul>
+        </div>
+      </nav>
+    </header>
+    {% load static %} <img class="polygon-one" src="{% static "users/media/horizontal-one.svg" %}" alt="2"/> 
+    <div class="text-box-two">
+      {% load static %} <img class="polygon-two" src="{% static "users/media/vertical-one.svg" %}" alt="3"/> 
+      <p class="slogan"> Save Money <br> Through <br> Effective <br> Donation. <p>
+    </div> 
+      <div class="text-box"> 
+        {% load static %} <img class="arrow" src="{% static "users/media/dollar.svg" %}" alt="4"/>
+        <br>
+        <h1>charma </h1>
+        <p> offers an easy way for <br> charities in need to connect with <br> donators </p>
+        <br>
+        <button class="button-one">
+         <a href = "browse_charities.html" class="button-one-text">
+           Browse Charities
+         </a>
+        </button>
+      </div>
+      {% load static %} <img class="polygon-three" src="{% static "users/media/horizontal-two.svg" %}" alt="5"/>
+      {% load static %} <img class="polygon-four" src="{% static "users/media/vertical-two.svg" %}" alt="6"/>
+      <br>
+      <br>
+      <div>
+        {% load static %} <img class="shape-one" src="{% static "users/media/shape-1.svg" %}" alt="7"/>
+        <br>
+        <br> 
+        {% load static %} <img class="shape-two" src="{% static "users/media/shape-2.svg" %}" alt="8"/>
+        {% load static %} <img class="pic-2" src="{% static "users/media/frame.svg" %}" alt="9"/>
+        {% load static %} <img class="pic-1" src="{% static "users/media/folder.svg" %}" alt="10"/>
+        <h1 class="features-one"> For Donators </h1>
+        <p class="words"> Making sure your money serves <br> the right purposes </p>
+        <h1 class="features-two"> For Charities </h1>
+        <p class="words-2"> The effective solution for <br> raising money for your cause </p>
+      </div>
+      <br>
+      <div>
+        <section class= "endblock">
+          <h2> Get Started Today. </h2>
+          <button class="for-donators">
+            <a href = "browse_charities.html" class="button-1"> For Donators </a>
+          </button>
+          {% load static %} <img class="bottom-logo" src="{% static "users/media/logoplain.svg" %}" alt="11"/>
+          <button class="for-charities">
+            <a href = "register_charity.html" class="button-2"> For Charities </a>
+          </button>
+        </section>
+      </div>
+    </body>
+</html>
+    {% if messages %}   
+        {% for message in messages %} 
+            <div>{{message}}</div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

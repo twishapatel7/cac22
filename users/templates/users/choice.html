@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="background_styles.css">
+        {% load static %} <link rel="stylesheet" href="{% static 'users/choice.css' %}">
+        <script src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <header>
+      <nav class="navbar">
+        <a href="home.html"><img class="circle" src="{% static 'users/media/logo.svg' %}" alt="home"/></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+              <li><a href="/posts/postsHome">Browse Charities</a></li>
+              <li><a href="/posts/addPost">Post your Charity</a></li>
+              <li><a href="/users/choice">Login/Register</a></li>      
+            </ul>
+          </div>
+      </nav>
+    </header>
+  </div>
+    <div class="one">
+     <a href="/users/login" class="links"> <button type="link" class="button-1"> login  </button>  </a>
+    </div>
+    <div class="two">
+    <a href="/users/register" class="links"> <button type="link" class="button-2"> register </button> </a>

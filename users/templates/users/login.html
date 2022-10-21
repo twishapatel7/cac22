@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users/styles.css' %}">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="index.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="home"/></a>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="/posts/postsHome">Browse Charities</a></li>
+              <li><a href="/posts/addPost">Post your Charity</a></li>
+              <li><a href="/users/choice">Login/Register</a></li>      
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class= "block">
+        <h2> charma </h2>
+        {% load static %} <img class= "logo" src="{% static "users/media/logoplain.svg" %}" alt="home"/>
+        <h4> The ultimate personalized charity <br> matcher </h4>
+      </section>
+    <section class = "block-2">
+        {% load static %} <img class= "sign" src="{% static "users/media/add.svg" %}" alt="home"/>
+      <h3> Login to Your Account </h3>
+
+    </section>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <p class="options"> new to charma? </p>
+        <a href="register.html" class="jog"> create an account </a> 
+        <br>
+        <button class = "submit-btn">Log in</button>
+    </form>
+</body>
+</html>
