@@ -13,7 +13,12 @@
         {{ form.as_p }}
         <button>Update</button>
     </form>
-
+    {% for thing in object_list %} 
+        <p><strong>donation amount:</strong></p>{{ thing.donation_amount }}
+        <p><strong>charity name:</strong> </p>{{ thing.charity_name }}
+        <br>
+        <hr>
+    {% endfor %}
     
 </body>
 </html>
