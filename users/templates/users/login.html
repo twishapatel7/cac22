@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {% load static %}
-    <link rel="stylesheet" href="{% static 'users/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'users/login.css' %}">
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,13 +41,16 @@
       <h3> Login to Your Account </h3>
 
     </section>
+    <div class="formstyle">
     <form action="" method="POST">
         {% csrf_token %}
         {{ form }}
+        <br>
         <p class="options"> new to charma? </p>
         <a href="register.html" class="jog"> create an account </a> 
         <br>
         <button class = "submit-btn">Log in</button>
     </form>
+    </div>
 </body>
 </html>
