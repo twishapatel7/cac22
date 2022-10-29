@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">    
-    
+    <link rel="stylesheet" href="background_styles.css">
     <link rel="stylesheet" href="{% static 'posts/home.css' %}">
     <title>Document</title>
 </head>
@@ -29,57 +29,20 @@
         </nav>
     </div>
     <h1>BROWSE CHARITIES.</h1>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome0">
-      Environment Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome1">
-      Education Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome2">
-      Child Care Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome3">
-      Healthcare Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome4">
-      Animal Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome5">
-      Domestic Violence Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome6">
-      Homeless Services Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome7">
-      Nutrition Charities
-    </a></button>
-
-    <br>
-
-    <button class="submit-btn"> <a href = "/posts/postsHome8">
-      Military Veterans Charities
-    </a></button>
+    <div class="allposts">
+    {% for post in object_list %} 
+        {% if post.charity_type == 'NU' %}
+            <div class="post">
+            <p><strong>title:</strong></p>{{ post.title }}
+            <p><strong>charity name:</strong> </p>{{ post.charity }}
+            <p><strong>description:</strong> </p>{{ post.description }}
+            <p><strong>charity email:</strong> </p>{{ post.charity_email }}
+            <p><strong>charity website</strong> </p>{{ post.charity_website }}
+            <p><strong>donation goal:</strong> </p>{{ post.donation_goal }}
+            </div>
+            <br>
+        {% endif %}
+    {% endfor %}
+    </div>
 </body>
 </html>
