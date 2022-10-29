@@ -9,7 +9,7 @@ from .models import Update
 
 class HomeView(ListView):
     model = Update
-    template_name = 'index.html'
+    template_name = 'updates.html'
 
 class AddPostView(CreateView):
     model = Update

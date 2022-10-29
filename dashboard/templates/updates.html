@@ -7,11 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>dashboard</h1>
-    <form action = "" method = "POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button>Update</button>
-    </form>
+    {% for thing in object_list %} 
+        <p><strong>amount:</strong></p>{{ thing.donation_amount }}
+        <p><strong>charity name:</strong> </p>{{ thing.charity_name }}
+    {% endfor %}
+    
 </body>
 </html>
