@@ -8,7 +8,7 @@ class Post(models.Model):
     charity = models.ForeignKey(User, on_delete = models.CASCADE)
     description = models.TextField()
     charity_email = models.CharField(max_length = 255, default='charityemail')
-    charity_website = models.TextField(default='charitywebsite')
+    charity_website = models.CharField(default='charitywebsite', max_length=255)
     donation_goal = models.CharField(max_length=255, default='10000')
 
     ENVIRONMENT = 'EV'

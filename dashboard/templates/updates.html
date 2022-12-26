@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="background_styles.css">
+    <link rel="stylesheet" href="{% static 'users/register.css' %}">
     <title>Document</title>
 </head>
 <body>
+  <header>
+    <div class="heading">
+        <nav class="navbar">
+          <a href="index.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="home"/></a>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="/posts/postsHome">Browse Charities</a></li>
+              <li><a href="/posts/addPost">Post your Charity</a></li>
+              <li><a href="/users/choice">Login/Register</a></li>      
+            </ul>
+          </div>
+        </nav>
+    </div>
+    </header>
+<body>
+    <div class="updatepost">
     {% for thing in object_list %} 
-        <p><strong>amount:</strong></p>{{ thing.donation_amount }}
-        <p><strong>charity name:</strong> </p>{{ thing.charity_name }}
+      <div class="update">
+        <div class="one"><p><strong>amount:</strong></p><div class="info">{{ thing.donation_amount }}</div></div>
+        <div class="one"><p><strong>charity name:</strong> </p> <div class="info"> {{ thing.charity_name }}</div></div>
+        <br>
+      </div>
     {% endfor %}
-    
+  </div>
+  
 </body>
 </html>

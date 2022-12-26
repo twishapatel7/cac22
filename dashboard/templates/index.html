@@ -4,14 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">    
+    
+    <link rel="stylesheet" href="{% static 'users/register.css' %}">
+    <script src="script.js" defer></script>
+    <title>charma</title>
 </head>
 <body>
-    <h1>dashboard</h1>
-    <form action = "" method = "POST">
+    <header>
+        <nav class="navbar">
+          <a href="index.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="home"/></a>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="navbar-links">
+            <ul>
+              <li><a href="/posts/postsHome">Browse Charities</a></li>
+              <li><a href="/posts/addPost">Post your Charity</a></li>
+              <li><a href="/users/choice">Login/Register</a></li>      
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <section class= "block">
+        <h2> charma </h2>
+        {% load static %} <img class= "logo" src="{% static "users/media/logoplain.svg" %}" alt="home"/>
+        <h4> The ultimate personalized charity <br> matcher </h4>
+      </section>
+      {% load static %} <img class="pic-1" src="{% static "dashboard/media/folder.svg" %}" alt="10"/>
+    <div class = "formstyle newstyle">
+    <form action="" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button>Update</button>
+        <h1 style="font-size: 20px; margin-top: -39px;" >charity name:</h1> <br> {{ form.charity_name }}
+        <h1 style="margin-left: 50px; font-size: 20px;">donation amount:</h1> <br> {{ form.donation_amount }}
+        <br>
+        <br>
+        <div class="best">
+            <button type="submit" id="imp-btn" name="" class="submit-btn"> update </button>
+        </div>
+    </div>
     </form>
 </body>
 </html>
