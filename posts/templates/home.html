@@ -10,26 +10,25 @@
     <link rel="stylesheet" href="{% static 'posts/home.css' %}">
     <title>Document</title>
 </head>
-<body>
-    <div class="heading">
-        <nav class="navbar">
-          <a href="index.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="home"/></a>
-          <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <ul>
-              <li><a href="/posts/postsHome">Browse Charities</a></li>
-              <li><a href="/posts/addPost">Post your Charity</a></li>
-              <li><a href="/users/choice">Login/Register</a></li>      
-            </ul>
-          </div>
-        </nav>
-    </div>
-    <h1>BROWSE CHARITIES.</h1>
-
+<header>
+      <nav class="navbar">
+        <a href="home.html">{% load static %} <img class="circle" src="{% static "users/media/logo.svg" %}" alt="1"/></a>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="/posts/postsHome">Browse Charities</a></li>
+            <li><a href="/posts/addPost">Post your Charity</a></li>
+            <li><a href="/users/choice">Login/Register</a></li>      
+          </ul>
+        </div>
+      </nav>
+      </header>
+      <body>
+        <h1 class="big">BROWSE CHARITIES.</h1>
     <button class="submit-btn"> <a href = "/posts/postsHome0">
       Environment Charities
     </a></button>

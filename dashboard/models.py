@@ -16,4 +16,4 @@ class Update(models.Model):
         return self.donation_amount + ' | ' + self.charity_name
     
     def get_absolute_url(self):
-        return ''
+        return reverse('update')

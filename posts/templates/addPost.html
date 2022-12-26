@@ -39,9 +39,18 @@
     <div class="addpostform">
     <form method = "POST">
         {% csrf_token %}
-        {{ form.as_p }}
+        <h1 class="ti" style="font-size: 25px;">title:</h1>{{ form.title }}
+        <h1 class="ti" style="font-size: 25px;">charity:</h1>{{ form.charity }}
+        <h1 class="ti" style="font-size: 25px;">description:</h1>{{ form.description }}
+        <div style="float: right; margin-top: -280px; margin-left: -1950px;">
+        <h1 class="ti" style="font-size: 25px; margin-left: -100px;">email:</h1><div style="margin-left: -100px;">{{ form.charity_email }}</div>
+        <h1 class="ti" style="font-size: 25px;margin-left: -100px;">website:</h1><div style="margin-left: -100px;">{{ form.charity_website }}</div>
+        <h1 class="ti" style="font-size: 25px;margin-left: -100px;">donation goal:</h1><div style="margin-left: -100px;">{{ form.donation_goal }}</div>
+        <h1 class="ti" style="font-size: 25px;margin-left: -100px;">charity type:</h1><div style="margin-left: -100px;">{{ form.charity_type }}</div>
+        
+        </div>
         <div class="best">
-            <button type="submit" id="imp-btn" name="" class="submit-btn"> post </button>
+            <button type="submit" id="imp-btn" name="" class="submit-btn" style="margin-top: 40px;"> post </button>
           </div>
     </form>
 </div>

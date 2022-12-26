@@ -8,9 +8,22 @@ body {
     background-color: #B1B695;
     font-size: 17px;
     font-weight: 400;
-    height: 500px;
-    width: 70%;
+    height: 700px;
+    width:70%;
     margin: auto;
+    text-align: center;
+}
+
+a:link, a:visited {
+   padding: 20px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+ }
+
+.big {
+   color: #EDE8EC;
+   text-align: center;
 }
 
 .allposts {
@@ -18,6 +31,19 @@ body {
     background-color: #EDE8EC;
     width: 80%;
     margin: auto;
+}
+
+.one {
+   display: inline-block;
+}
+.info {
+   color: #EDE8EC;
+}
+
+p {
+   color: #5E4B56;
+   font-size: 18px;
+   margin-left: 15px;
 }
 
 
@@ -37,7 +63,7 @@ header {
      align-items: center;
      color: #EDE8EC;
      justify-content: space-between;
-     margin-top: 25px;
+     margin-top: 10px;
   }
   
   .navbar-links ul {
@@ -130,12 +156,12 @@ header {
      margin-top: -55px;
   }
 
-.heading {
-   height: 100px;
+header {
+   height: 110px;
    width: 102.85%;
    margin: auto;
    margin-left: -30px;
-   margin-top: -18px;
+   margin-top: -24px;
    background-color:#EDE8EC;
 }
 
@@ -160,6 +186,12 @@ header {
    transform: translate3d(0, 0, 0);
    transition: all 150ms;
    text-transform: lowercase;
-   margin-left: 120px;
-   margin-top: 60px;
+   text-align: center;
+   margin-top: 30px;
+   margin-left: 510px;
   }
+
+.pic-1 {
+   float: right;
+   height: 100px;
+}

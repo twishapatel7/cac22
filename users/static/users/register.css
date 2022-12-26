@@ -101,6 +101,10 @@ body {
         display: flex;
     }
  }
+
+ .ti {
+   font-size: 12px;
+ }
  
  img.circle {
     width: 220px;
@@ -199,7 +203,6 @@ h3 {
    transition: all 150ms;
    text-transform: lowercase;
    margin-left: 20px;
-   margin-top: 60px;
  }
  
  .submit-btn:hover {
@@ -252,7 +255,37 @@ h3 {
 }
 
 .addpostform {
+   margin-top: -60px;
     margin-left:500px;
     color: #5E4B56;
     
+}
+
+.pic-1 {
+   float: left;
+}
+
+.newstyle {
+   margin-top: 50px;
+}
+
+.info {
+   color: #EDE8EC;
+}
+
+.one {
+   color: #EDE8EC;
+}
+
+.update {
+   text-align: center;
+   background-color: #5E4B56;
+   width: 50%;
+   margin: auto;
+   font-size: 20px;
+
+}
+
+.updatepost {
+   margin-top: -100px;
 }
